@@ -1,0 +1,22 @@
+#This code is the start to your amazing discord bot!
+#Copy and paste it to your bot before you start coding and it will be much easier! 
+#If you are not using replit for your token than you need to do TOKEN=(Insert Token Here)
+
+import discord
+import os
+
+client = discord.Client()
+
+@client.event
+async def on_ready():
+  print('We have logged in as {0.user}'.format(client))
+
+@client.event
+async def on_message(message):
+  if message.author == client.user:
+    return
+    
+    
+    client.run(os.getenv('TOKEN'))
+   
+ #This works best on replit.
